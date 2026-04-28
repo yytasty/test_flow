@@ -43,4 +43,5 @@ jobs:
         uses: actions/deploy-pages@v4
 
       - name: Report site URL
-        run: echo "UnitX site URL: ${{ steps.deployment.outputs.page_url }}" >> "$GITHUB_STEP_SUMMARY"
+        run: |
+          echo "UnitX site URL: ${{ steps.deployment.outputs.page_url }}" >> "$GITHUB_STEP_SUMMARY"
